@@ -1,0 +1,237 @@
+<!--
+  Generated template for the ActualizarDatosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>actualizar-datos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-image">
+  <article>
+    <main>
+      <form>
+        <ion-card>
+          <ion-card-header class="card">
+            Datos Antropometricos
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-col>
+                Peso:
+              </ion-col>
+              <ion-col>
+                {{datos.peso}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Talla:
+              </ion-col>
+              <ion-col>
+                {{datos.talla}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Edad:
+              </ion-col>
+              <ion-col>
+                {{datos.edad}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Sexo:
+              </ion-col>
+              <ion-col>
+                {{datos.sexo}}
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header class="card">
+            Medidas Antropmetricas
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-col>
+                Cuello:
+              </ion-col>
+              <ion-col>
+                {{datos.cuello}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Brazo:
+              </ion-col>
+              <ion-col>
+                {{datos.brazo}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Pecho:
+              </ion-col>
+              <ion-col>
+                {{datos.pecho}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Cadera:
+              </ion-col>
+              <ion-col>
+                {{datos.cadera}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Cintura:
+              </ion-col>
+              <ion-col>
+                {{datos.cintura}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Pierna:
+              </ion-col>
+              <ion-col>
+                {{datos.pierna}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Pantorilla:
+              </ion-col>
+              <ion-col>
+                {{datos.pantorilla}}
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header class="card">
+            Habitos e Intereses
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-col>
+                Número de comidas:
+              </ion-col>
+              <ion-col>
+                {{datos.comidas}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Horas de sueño:
+              </ion-col>
+              <ion-col>
+                {{datos.horasSueno}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Tomas?:
+              </ion-col>
+              <ion-col>
+                {{datos.toma}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Fumas?:
+              </ion-col>
+              <ion-col>
+                {{datos.fuma}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Enfermedades considerables:
+              </ion-col>
+              <ion-col>
+                {{datos.enfermedadesCardiacas}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Tu meta:
+              </ion-col>
+              <ion-col>
+                {{datos.meta}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Deporte que practicas:
+              </ion-col>
+              <ion-col>
+                {{datos.deporte}}
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header class="card">
+            Pruebas físicas
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-col>
+                Test de Resistencia:
+              </ion-col>
+              <ion-col>
+                {{datos.resistencia}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Test de Agilidad:
+              </ion-col>
+              <ion-col>
+                {{datos.flecibilidad}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Test de Fuerza:
+              </ion-col>
+              <ion-col>
+                {{datos.fuerza}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                Test de Velocidad:
+              </ion-col>
+              <ion-col>
+                {{datos.velocidad}}
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <button ion-button round class="generico-btn" (click)="actualizarDatos()">Actualizar Datos</button>
+            </ion-col>
+            <ion-col>
+              <button ion-button round class="generico-btn" (click)="verRutina()">Ver Rutina</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+    </main>
+  </article>
+</ion-content>

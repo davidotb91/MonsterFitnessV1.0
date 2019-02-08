@@ -1,0 +1,111 @@
+<!--
+  Generated template for the DatosAntropometiicosDosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Datos Antropometricos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-image">
+  <article>
+    <main>
+      <form [formGroup]="myForm">
+        <ion-item>
+          <ion-label>Cuello:</ion-label>
+          <ion-input formControlName="cuello" [(ngModel)]="cuello" name="cuello" type="tel" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="myForm.get('cuello').errors && myForm.get('cuello').dirty">
+          <p color="danger" ion-text *ngIf="myForm.get('cuello').hasError('required')">Campo requerido</p>
+          <p color="danger" ion-text *ngIf="myForm.get('cuello').hasError('pattern')">ERROR! medida incorrecta</p>
+        </ion-item>
+        <ion-item>
+          <ion-label>Brazo:</ion-label>
+          <ion-input formControlName="brazo" [(ngModel)]="brazo" name="brazo" type="tel" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="myForm.get('brazo').errors && myForm.get('brazo').dirty">
+          <p color="danger" ion-text *ngIf="myForm.get('brazo').hasError('required')">Campo requerido</p>
+          <p color="danger" ion-text *ngIf="myForm.get('brazo').hasError('pattern')">ERROR! medida incorrecta</p>
+        </ion-item>
+        <ion-item>
+          <ion-label>Pecho:</ion-label>
+          <ion-input formControlName="pecho" [(ngModel)]="pecho" name="pecho" type="tel" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="myForm.get('pecho').errors && myForm.get('pecho').dirty">
+          <p color="danger" ion-text *ngIf="myForm.get('pecho').hasError('required')">Campo requerido</p>
+          <p color="danger" ion-text *ngIf="myForm.get('pecho').hasError('pattern')">ERROR! medida incorrecta</p>
+        </ion-item>
+        <ion-item>
+          <ion-label>Cintura:</ion-label>
+          <ion-input formControlName="cintura" [(ngModel)]="cintura" name="cintura" type="tel" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="myForm.get('cintura').errors && myForm.get('cintura').dirty">
+          <p color="danger" ion-text *ngIf="myForm.get('cintura').hasError('required')">Campo requerido</p>
+          <p color="danger" ion-text *ngIf="myForm.get('cintura').hasError('pattern')">ERROR! medida incorrecta</p>
+        </ion-item>
+        <ion-item>
+          <ion-label>Cadera:</ion-label>
+          <ion-input formControlName="cadera" [(ngModel)]="cadera" name="cadera" type="tel" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="myForm.get('cadera').errors && myForm.get('cadera').dirty">
+          <p color="danger" ion-text *ngIf="myForm.get('cadera').hasError('required')">Campo requerido</p>
+          <p color="danger" ion-text *ngIf="myForm.get('cadera').hasError('pattern')">ERROR! medida incorrecta</p>
+        </ion-item>
+        <ion-item>
+          <ion-label>Pierna:</ion-label>
+          <ion-input formControlName="pierna" [(ngModel)]="pierna" name="pierna" type="tel" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="myForm.get('pierna').errors && myForm.get('pierna').dirty">
+          <p color="danger" ion-text *ngIf="myForm.get('pierna').hasError('required')">Campo requerido</p>
+          <p color="danger" ion-text *ngIf="myForm.get('pierna').hasError('pattern')">ERROR! medida incorrecta</p>
+        </ion-item>
+        <ion-item>
+          <ion-label>Pantorilla:</ion-label>
+          <ion-input formControlName="pantorilla" [(ngModel)]="pantorilla" name="pantorilla" type="tel" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="myForm.get('pantorilla').errors && myForm.get('pantorilla').dirty">
+          <p color="danger" ion-text *ngIf="myForm.get('pantorilla').hasError('required')">Campo requerido</p>
+          <p color="danger" ion-text *ngIf="myForm.get('pantorilla').hasError('pattern')">ERROR! medida incorrecta</p>
+        </ion-item>
+
+        <!--         <ion-item>
+          <ion-label>Cuello:</ion-label>
+          <ion-input type="tel" [(ngModel)]="cuello" name="cuello" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Brazo:</ion-label>
+          <ion-input type="tel" [(ngModel)]="brazo" name="brazo" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Pecho:</ion-label>
+          <ion-input type="tel" [(ngModel)]="pecho" name="pecho" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Cintura:</ion-label>
+          <ion-input type="tel" [(ngModel)]="cintura" name="cintura" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Cadera:</ion-label>
+          <ion-input type="tel" [(ngModel)]="cadera" name="cadera" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Pierna:</ion-label>
+          <ion-input type="tel" [(ngModel)]="pierna" name="pierna" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>pantorilla:</ion-label>
+          <ion-input type="tel" [(ngModel)]="pantorilla" name="pantorilla" placeholder="Ingrese la medida en cm"></ion-input>
+        </ion-item> -->
+      </form>
+    </main>
+    <footer>
+      <button ion-button round class="generico-btn" (click)="navegarPantalla()" [disabled]="!myForm.valid">Continuar</button>
+    </footer>
+  </article>
+</ion-content>

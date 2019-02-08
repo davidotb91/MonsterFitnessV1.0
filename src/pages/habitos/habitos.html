@@ -1,0 +1,103 @@
+<!--
+  Generated template for the HabitosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Hábitos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-image">
+  <article>
+    <main>
+      <form [formGroup]="myForm">
+        <ion-card>
+          <ion-card-header style="color:aliceblue">
+            Hábitos
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Nro. de comidas diarias:</ion-label>
+              <ion-input formControlName="comidas" [(ngModel)]="comidas" name="comidas" type="tel" placeholder="Ingrese numeros enteros"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="myForm.get('comidas').errors && myForm.get('comidas').dirty">
+              <p color="danger" ion-text *ngIf="myForm.get('comidas').hasError('required')">Campo requerido</p>
+              <p color="danger" ion-text *ngIf="myForm.get('comidas').hasError('pattern')">ERROR! numero incorrecto</p>
+            </ion-item>
+            <ion-item>
+              <ion-label>Horas de sueño:</ion-label>
+              <ion-input formControlName="horasSueno" [(ngModel)]="horasSueno" name="horasSueno" type="tel" placeholder="Ingrese numeros enteros"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="myForm.get('horasSueno').errors && myForm.get('horasSueno').dirty">
+              <p color="danger" ion-text *ngIf="myForm.get('horasSueno').hasError('required')">Campo requerido</p>
+              <p color="danger" ion-text *ngIf="myForm.get('horasSueno').hasError('pattern')">ERROR! numero incorrecto</p>
+            </ion-item>
+            <ion-item>
+              <ion-label>Toma:</ion-label>
+              <ion-select interface="popover" name="toma" [(ngModel)]="toma" formControlName="toma">
+                <ion-option value="SI">SI</ion-option>
+                <ion-option value="NO">NO</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label>Fuma:</ion-label>
+              <ion-select interface="popover" name="fuma" [(ngModel)]="fuma" formControlName="fuma">
+                <ion-option value="SI">SI</ion-option>
+                <ion-option value="NO">NO</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label>Tiene alguna enfermedad considerable:</ion-label>
+              <ion-select interface="popover" name="enfermedadesCardiacas" [(ngModel)]="enfermedadesCardiacas" formControlName="enfermedadesCardiacas">
+                <ion-option value="SI">SI</ion-option>
+                <ion-option value="NO">NO</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </form>
+
+      <ion-card>
+        <ion-card-header style="color:aliceblue">
+          Intereses
+        </ion-card-header>
+        <ion-card-content>
+          <form [formGroup]="myForm2">
+            <ion-item>
+              <ion-label>Meta:</ion-label>
+              <ion-select interface="popover" [(ngModel)]="meta" name="meta" formControlName="meta">
+                <ion-option value="FUERZA">FUERZA</ion-option>
+                <ion-option value="VOLUMEN">VOLUMEN</ion-option>
+                <ion-option value="DEFINICION">DEFINICION</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label>Hace Deporte:</ion-label>
+              <ion-select interface="popover" [(ngModel)]="deportista" name="deportista" formControlName="deportista">
+                <ion-option value="SI">SI</ion-option>
+                <ion-option value="NO">NO</ion-option>
+              </ion-select>
+            </ion-item>
+          </form>
+          <ion-item *ngIf='this.deportista === "SI"'>
+            <ion-label>Que deporte practica:</ion-label>
+            <ion-select interface="popover" [(ngModel)]="deporte" name="deporte">
+              <ion-option value="Rugby">Rugby</ion-option>
+              <ion-option value="Futbol">Futbol</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+    </main>
+    <footer>
+      <button ion-button round class="generico-btn" (click)="navegarPantalla()" [disabled]="!myForm.valid || !myForm2.valid">Continuar</button>
+    </footer>
+  </article>
+</ion-content>
